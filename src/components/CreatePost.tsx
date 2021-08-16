@@ -7,7 +7,7 @@ import '@uiw/react-markdown-preview/dist/markdown.css';
 const CreatePost = () => {
   const [title, setTitle] = useState<string>('');
   const [coverImage, setCoverImage] = useState<string>('');
-  const [content, setContent] = useState<string>('');
+  const [content, setContent] = useState<string | undefined>('');
 
   const handleSubmit = (event: SyntheticEvent) => {
     event.preventDefault();
@@ -72,7 +72,7 @@ const CreatePost = () => {
                   <div className="border-2 border-gray-500">
                     <MDEditor
                       value={content}
-                      onChange={(content) => content && setContent(content)}
+                      onChange={(content) => setContent(content)}
                     />
                   </div>
                 </div>
