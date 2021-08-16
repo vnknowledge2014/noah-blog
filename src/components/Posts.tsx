@@ -40,9 +40,9 @@ const Posts = () => {
     <>
       <div className="min-h-screen bg-gray-100 pt-20">
         <div className="container mx-auto">
-          <ul className="inline-flex space-x-5">
+          <ul className="flex flex-wrap">
             {posts.map((blog) => (
-              <li key={blog?.id} className="flex-1">
+              <li key={blog?.id} className="inline-flex flex-auto m-4">
                 <div className=" bg-white  mx-auto shadow-lg rounded-lg hover:shadow-xl transition duration-200 max-w-sm">
                   <img
                     className="rounded-t-lg"
