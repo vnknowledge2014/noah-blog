@@ -42,7 +42,7 @@ const Posts = () => {
       <div className="min-h-screen bg-gray-100 pt-20">
         <div className="container mx-auto">
           <ul className="inline-flex space-x-5">
-            {posts.map((blog) => (
+            {posts.map((blog: PostId) => (
               <li key={blog?.id} className="flex-1">
                 <div className=" bg-white  mx-auto shadow-lg rounded-lg hover:shadow-xl transition duration-200 max-w-sm">
                   <Image
@@ -86,8 +86,8 @@ const Posts = () => {
                 <div className="p-6 flex-grow">
                   <Image
                     className="w-full"
-                    src={post?.coverImage}
-                    alt={post?.title}
+                    src={post?.coverImage as string}
+                    alt={post?.title as string}
                   />
                   <MDEditor.Markdown source={post?.content} />
                 </div>
