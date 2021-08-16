@@ -33,17 +33,7 @@ const Posts = () => {
           ...doc.data(),
         })) as PostId[];
         setPosts(blogs);
-        setIsShown(false);
       });
-
-    if (!sessionStorage.popupModal) {
-      const timer = setTimeout(() => {
-        setIsShown(true);
-        sessionStorage.popupModal = 1;
-      }, 2000);
-
-      return () => clearTimeout(timer);
-    }
   }, []);
 
   return (
