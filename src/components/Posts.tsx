@@ -4,6 +4,7 @@ import MDEditor from '@uiw/react-md-editor';
 import '@uiw/react-md-editor/dist/markdown-editor.css';
 import '@uiw/react-markdown-preview/dist/markdown.css';
 import { Post, PostId } from '@typings/Post';
+import Image from 'next/image';
 
 const Posts = () => {
   const [posts, setPosts] = useState<PostId[]>([]);
@@ -44,7 +45,7 @@ const Posts = () => {
             {posts.map((blog) => (
               <li key={blog?.id} className="flex-1">
                 <div className=" bg-white  mx-auto shadow-lg rounded-lg hover:shadow-xl transition duration-200 max-w-sm">
-                  <img
+                  <Image
                     className="rounded-t-lg"
                     src={blog?.coverImage}
                     alt={blog?.title}
@@ -83,7 +84,7 @@ const Posts = () => {
                   {post?.title}
                 </div>
                 <div className="p-6 flex-grow">
-                  <img
+                  <Image
                     className="w-full"
                     src={post?.coverImage}
                     alt={post?.title}
