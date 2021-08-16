@@ -70,7 +70,7 @@ const CreatePost = () => {
                 <br />
                 <div className="container">
                   <div className="border-2 border-gray-500">
-                    <MDEditor value={content} onChange={() => setContent} />
+                    <MDEditor value={content} onChange={setContent} />
                   </div>
                 </div>
               </div>
