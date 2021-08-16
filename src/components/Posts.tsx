@@ -33,6 +33,7 @@ const Posts = () => {
           ...doc.data(),
         })) as PostId[];
         setPosts(blogs);
+        setIsShown(false);
       });
 
     if (!sessionStorage.popupModal) {
